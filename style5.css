@@ -1,0 +1,265 @@
+/* General Reset */
+body, h1, p, a, button, input, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    color: #333;
+    padding: 0 10%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #fff;
+    animation: slideDown 1.5s ease-in-out;
+    text-align: center; /* Centered h1 */
+    width: 100%; /* Ensure it takes full width */
+}
+
+header a button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 20px;
+    background: #fff;
+    color: #555;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+header a button:hover {
+    transform: scale(1.1);
+    background: #74ebd5;
+    color: #fff;
+}
+
+/* Main Styling */
+main {
+    margin: 40px 0;
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    animation: slideUp 1.5s ease-in-out;
+}
+
+/* About Section Image Enhancements */
+section#About img {
+    display: block;
+    margin: 20px auto;
+    width: 250px; /* Fixed square width */
+    height: 250px; /* Fixed square height */
+    object-fit: cover; /* Ensures the image fits within the square */
+    border-radius: 20px; /* Slightly rounded corners for aesthetics */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+    animation: pulse 3s infinite ease-in-out;
+}
+
+section#About img:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 30px rgba(116, 235, 213, 0.5), 0 0 40px rgba(172, 182, 229, 0.5);
+    filter: brightness(1.2);
+}
+
+/* Ensure Background Compatibility */
+section#About {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Glowing Border Effect */
+section#About img::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 270px; /* Adjusted for the square shape */
+    height: 270px; /* Adjusted for the square shape */
+    border-radius: 20px;
+    border: 3px solid rgba(116, 235, 213, 0.5);
+    box-shadow: 0 0 15px rgba(116, 235, 213, 0.8), 0 0 30px rgba(172, 182, 229, 0.8);
+    animation: borderGlow 2s infinite alternate ease-in-out;
+}
+
+/* Skills Section */
+ol {
+    margin-top: 20px;
+    list-style: none;
+}
+
+ol li {
+    padding: 10px 0;
+    font-size: 1.2rem;
+    color: #555;
+    transition: color 0.3s;
+}
+
+ol li:hover {
+    color: #74ebd5;
+    transform: translateX(10px);
+    transition: transform 0.3s;
+}
+
+/* Redesigned Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 10px 0 5px;
+    align-self: flex-start;
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #74ebd5;
+    box-shadow: 0 0 8px rgba(116, 235, 213, 0.5);
+    outline: none;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+form button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    background: #74b6eb;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background: #acb6e5;
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: rgba(77, 87, 163, 0); /* Updated to match gradient theme */
+    color: #333; /* Darker text for better readability */
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Keyframe Animations for Image */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes borderGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(116, 235, 213, 0.4), 0 0 20px rgba(172, 182, 229, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(116, 235, 213, 0.8), 0 0 40px rgba(172, 182, 229, 0.8);
+    }
+}
